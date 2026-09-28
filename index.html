@@ -1,0 +1,2871 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DhanSetu Business Solutions: loans, credit cards, insurance and investment plans with clear terms and personal guidance.">
+
+    <title>DhanSetu Business Solutions</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+/* =====================================================
+   DHANSETU BUSINESS SOLUTIONS
+   Palette taken from the logo: deep navy, sky blue, gold
+===================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@300;400;600;700&display=swap");
+
+:root {
+    --navy-950: #060d22;
+    --navy-900: #0a1432;
+    --navy-800: #101f4a;
+    --navy-700: #1a3170;
+
+    --blue: #2f8fe0;
+    --sky: #62c6f2;
+
+    --gold: #f0b64a;
+    --gold-deep: #d99a2b;
+
+    --ink: #0a1432;
+    --text-dark: #4a5673;
+    --text-light: #e8edf9;
+    --muted: #9aa8c7;
+
+    --paper: #f4f7fc;
+    --line: #dde5f2;
+
+    --radius-lg: 22px;
+    --radius-md: 14px;
+    --radius-sm: 10px;
+
+    --gold-gradient: linear-gradient(135deg, #ffd27a 0%, #f0b64a 45%, #d99a2b 100%);
+    --blue-gradient: linear-gradient(135deg, #62c6f2 0%, #2f8fe0 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
+    color: var(--text-dark);
+    background: #fff;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Sora", "Manrope", sans-serif;
+    color: var(--ink);
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+}
+
+:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+}
+
+section[id],
+footer[id] {
+    scroll-margin-top: 84px;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.btn-gold {
+    background: var(--gold-gradient);
+    color: var(--navy-900);
+    border: none;
+    padding: 13px 26px;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.btn-gold:hover {
+    color: var(--navy-900);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(240, 182, 74, .38);
+}
+
+.btn-ghost {
+    background: transparent;
+    color: #fff;
+    border: 1.5px solid rgba(255, 255, 255, .35);
+    padding: 12px 26px;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    transition: background .2s, border-color .2s;
+}
+
+.btn-ghost:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, .08);
+    border-color: rgba(255, 255, 255, .7);
+}
+
+.text-link {
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.text-link:hover {
+    color: var(--navy-700);
+}
+
+
+/* =====================================================
+   TOP BAR
+===================================================== */
+
+.topbar {
+    background: var(--navy-950);
+    color: var(--muted);
+    font-size: 13px;
+    padding: 9px 0;
+}
+
+.topbar a {
+    color: var(--muted);
+    transition: color .2s;
+}
+
+.topbar a:hover {
+    color: var(--gold);
+}
+
+.topbar i {
+    color: var(--gold);
+    margin-right: 6px;
+}
+
+.topbar .topbar-links a {
+    margin-left: 22px;
+}
+
+
+/* =====================================================
+   HEADER / NAVBAR
+===================================================== */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(10, 20, 50, .92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+}
+
+.site-header .navbar {
+    padding: 12px 0;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-mark {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+}
+
+.brand-name {
+    font-family: "Sora", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--blue);
+    line-height: 1;
+    background: var(--blue-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.brand-tag {
+    display: block;
+    color: var(--gold);
+    font-size: 12.5px;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.site-header .nav-link {
+    color: var(--text-light) !important;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 14px !important;
+    border-radius: var(--radius-sm);
+    transition: color .2s, background .2s;
+}
+
+.site-header .nav-link:hover,
+.site-header .nav-link.active {
+    color: var(--gold) !important;
+    background: rgba(255, 255, 255, .06);
+}
+
+.site-header .dropdown-menu {
+    background: var(--navy-800);
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: var(--radius-md);
+    padding: 8px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .4);
+}
+
+.site-header .dropdown-item {
+    color: var(--text-light);
+    border-radius: var(--radius-sm);
+    padding: 9px 14px;
+    font-size: 14px;
+}
+
+.site-header .dropdown-item:hover {
+    background: rgba(240, 182, 74, .14);
+    color: var(--gold);
+}
+
+.navbar-toggler {
+    border: 1px solid rgba(255, 255, 255, .3);
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 96px 0 130px;
+    color: var(--text-light);
+    background:
+        radial-gradient(700px 420px at 12% 18%, rgba(47, 143, 224, .28), transparent 65%),
+        radial-gradient(560px 380px at 92% 85%, rgba(240, 182, 74, .16), transparent 65%),
+        linear-gradient(160deg, var(--navy-900) 0%, var(--navy-950) 100%);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .035) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse at 30% 40%, #000 20%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse at 30% 40%, #000 20%, transparent 75%);
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(240, 182, 74, .4);
+    background: rgba(240, 182, 74, .1);
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.hero h1 {
+    color: #fff;
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 300;
+    margin: 24px 0 20px;
+    letter-spacing: -.5px;
+}
+
+.hero h1 strong {
+    display: block;
+    font-weight: 700;
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-lead {
+    font-size: 18px;
+    max-width: 540px;
+    color: #c4cfe6;
+}
+
+.hero-actions {
+    margin-top: 34px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.hero-trust {
+    margin-top: 42px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 28px;
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.hero-trust i {
+    color: var(--sky);
+    margin-right: 8px;
+}
+
+/* rising bars: the one animated moment on the page */
+
+.hero-bars {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 150px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 14px;
+    padding: 0 24px;
+    z-index: 1;
+    opacity: .55;
+    pointer-events: none;
+}
+
+.hero-bars span {
+    flex: 0 1 64px;
+    height: var(--h);
+    border-radius: 10px 10px 0 0;
+    background: linear-gradient(180deg, rgba(98, 198, 242, .55), rgba(47, 143, 224, .05));
+    transform-origin: bottom;
+    animation: rise 1.1s cubic-bezier(.2, .8, .2, 1) both;
+    animation-delay: calc(var(--i) * 90ms);
+}
+
+.hero-bars span:nth-child(3n) {
+    background: linear-gradient(180deg, rgba(240, 182, 74, .5), rgba(240, 182, 74, .04));
+}
+
+@keyframes rise {
+    from { transform: scaleY(0); }
+    to   { transform: scaleY(1); }
+}
+
+
+/* login card */
+
+.login-card {
+    background: rgba(255, 255, 255, .07);
+    border: 1px solid rgba(255, 255, 255, .16);
+    border-radius: var(--radius-lg);
+    padding: 36px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, .45);
+}
+
+.login-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 26px;
+}
+
+.login-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-md);
+    background: var(--gold-gradient);
+    color: var(--navy-900);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.login-head h2 {
+    color: #fff;
+    font-size: 21px;
+}
+
+.login-head p {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 2px 0 0;
+}
+
+.login-card label {
+    color: var(--text-light);
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.login-card .form-control {
+    height: 50px;
+    background: rgba(6, 13, 34, .55);
+    border: 1px solid rgba(255, 255, 255, .16);
+    border-radius: var(--radius-md);
+    color: #fff;
+}
+
+.login-card .form-control::placeholder {
+    color: #7d8bac;
+}
+
+.login-card .form-control:focus {
+    background: rgba(6, 13, 34, .75);
+    border-color: var(--gold);
+    box-shadow: 0 0 0 4px rgba(240, 182, 74, .18);
+    color: #fff;
+}
+
+.login-submit {
+    width: 100%;
+    margin-top: 6px;
+    padding: 14px;
+}
+
+.login-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.login-links a {
+    color: var(--sky);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.login-links a:hover {
+    color: var(--gold);
+}
+
+
+/* =====================================================
+   COMMON SECTION
+===================================================== */
+
+.section {
+    padding: 100px 0;
+}
+
+.section-light {
+    background: var(--paper);
+}
+
+.section-dark {
+    color: var(--text-light);
+    background:
+        radial-gradient(600px 400px at 90% 10%, rgba(47, 143, 224, .2), transparent 65%),
+        linear-gradient(160deg, var(--navy-900), var(--navy-950));
+}
+
+.section-dark h2,
+.section-dark h3,
+.section-dark h5 {
+    color: #fff;
+}
+
+.section-head {
+    max-width: 620px;
+    margin-bottom: 52px;
+}
+
+.section-head h2 {
+    font-size: clamp(30px, 3.6vw, 42px);
+    font-weight: 600;
+    letter-spacing: -.4px;
+    margin-bottom: 14px;
+}
+
+.section-head p {
+    color: var(--text-dark);
+    font-size: 17px;
+}
+
+.section-kicker {
+    display: inline-block;
+    color: var(--gold-deep);
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+
+/* =====================================================
+   SERVICES (bento)
+===================================================== */
+
+.bento {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+}
+
+.bento-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 34px;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow .25s, border-color .25s;
+}
+
+.bento-card:hover {
+    border-color: rgba(47, 143, 224, .5);
+    box-shadow: 0 18px 44px rgba(16, 31, 74, .1);
+}
+
+.bento-card h3 {
+    font-size: 21px;
+    margin: 20px 0 10px;
+}
+
+.bento-card p {
+    flex-grow: 1;
+    margin-bottom: 18px;
+}
+
+.bento-main {
+    grid-column: span 5;
+    grid-row: span 2;
+    color: var(--text-light);
+    background:
+        radial-gradient(360px 260px at 100% 0%, rgba(240, 182, 74, .22), transparent 70%),
+        linear-gradient(160deg, var(--navy-800), var(--navy-950));
+    border-color: transparent;
+}
+
+.bento-main h3 {
+    color: #fff;
+    font-size: 30px;
+    margin-top: 28px;
+}
+
+.bento-main p {
+    color: #c4cfe6;
+    font-size: 17px;
+}
+
+.bento-main .text-link {
+    color: var(--gold);
+}
+
+.bento-main ul {
+    list-style: none;
+    margin: 0 0 26px;
+}
+
+.bento-main li {
+    color: #dbe3f5;
+    padding: 6px 0;
+    font-size: 15px;
+}
+
+.bento-main li i {
+    color: var(--gold);
+    margin-right: 10px;
+}
+
+.bento-wide { grid-column: span 7; }
+.bento-half { grid-column: span 4; }
+.bento-third { grid-column: span 3; }
+
+.icon-tile {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-md);
+    background: var(--blue-gradient);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+}
+
+.bento-main .icon-tile {
+    width: 64px;
+    height: 64px;
+    background: var(--gold-gradient);
+    color: var(--navy-900);
+    font-size: 30px;
+}
+
+.icon-tile.gold {
+    background: var(--gold-gradient);
+    color: var(--navy-900);
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about-frame {
+    position: relative;
+    padding: 0 0 26px 26px;
+}
+
+.about-frame::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 78%;
+    height: 78%;
+    border: 2px solid var(--gold);
+    border-radius: var(--radius-lg);
+}
+
+.about-frame img {
+    position: relative;
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, .4);
+}
+
+.about-content {
+    padding-left: 34px;
+}
+
+.about-content h2 {
+    font-size: clamp(30px, 3.6vw, 40px);
+    font-weight: 600;
+    margin: 6px 0 20px;
+}
+
+.about-content p {
+    color: #c4cfe6;
+    margin-bottom: 14px;
+}
+
+.about-points {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 28px 0 32px;
+}
+
+.about-points div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, .12);
+    background: rgba(255, 255, 255, .04);
+    color: var(--text-light);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.about-points i {
+    color: var(--gold);
+    font-size: 18px;
+}
+
+
+/* =====================================================
+   LOANS + EMI CALCULATOR
+===================================================== */
+
+.loan-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 26px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    margin-bottom: 18px;
+    transition: border-color .25s, box-shadow .25s;
+}
+
+.loan-item:hover {
+    border-color: rgba(47, 143, 224, .5);
+    box-shadow: 0 14px 34px rgba(16, 31, 74, .09);
+}
+
+.loan-item h3 {
+    font-size: 19px;
+    margin-bottom: 6px;
+}
+
+.loan-item p {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.calc {
+    color: var(--text-light);
+    background:
+        radial-gradient(340px 240px at 100% 0%, rgba(47, 143, 224, .3), transparent 70%),
+        linear-gradient(160deg, var(--navy-800), var(--navy-950));
+    border-radius: var(--radius-lg);
+    padding: 38px;
+    box-shadow: 0 30px 60px rgba(10, 20, 50, .25);
+}
+
+.calc h3 {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.calc-sub {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 26px;
+}
+
+.calc-row {
+    margin-bottom: 22px;
+}
+
+.calc-row-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.calc-row-top output {
+    font-family: "Sora", sans-serif;
+    color: var(--gold);
+    font-size: 17px;
+}
+
+.calc input[type="range"] {
+    width: 100%;
+    accent-color: var(--gold);
+    cursor: pointer;
+}
+
+.calc-result {
+    margin-top: 28px;
+    padding: 24px;
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, .06);
+    border: 1px solid rgba(255, 255, 255, .12);
+}
+
+.calc-emi-label {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.calc-emi {
+    font-family: "Sora", sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.2;
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.calc-split {
+    display: flex;
+    height: 10px;
+    border-radius: 999px;
+    overflow: hidden;
+    margin: 18px 0 14px;
+    background: rgba(255, 255, 255, .1);
+}
+
+.calc-split .principal {
+    background: var(--blue-gradient);
+    transition: width .3s;
+}
+
+.calc-split .interest {
+    background: var(--gold-gradient);
+    flex-grow: 1;
+}
+
+.calc-legend {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.calc-legend strong {
+    display: block;
+    color: #fff;
+    font-size: 15px;
+}
+
+.calc-note {
+    margin-top: 16px;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+
+/* =====================================================
+   DIGITAL BANKING
+===================================================== */
+
+.phone-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.phone {
+    position: relative;
+    width: 290px;
+    padding: 12px;
+    border-radius: 44px;
+    background: linear-gradient(160deg, #2a3f7d, #0e1a3e);
+    box-shadow:
+        0 40px 80px rgba(0, 0, 0, .5),
+        0 0 0 1px rgba(255, 255, 255, .12) inset;
+}
+
+.phone-screen {
+    border-radius: 34px;
+    padding: 26px 20px 22px;
+    background: var(--navy-950);
+    min-height: 540px;
+}
+
+.phone-notch {
+    width: 90px;
+    height: 20px;
+    margin: -14px auto 18px;
+    border-radius: 0 0 14px 14px;
+    background: #000;
+}
+
+.phone-hello {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.phone-title {
+    color: #fff;
+    font-family: "Sora", sans-serif;
+    font-size: 17px;
+    margin-bottom: 16px;
+}
+
+.phone-balance {
+    padding: 20px;
+    border-radius: 20px;
+    background: var(--blue-gradient);
+    color: #fff;
+    box-shadow: 0 16px 30px rgba(47, 143, 224, .35);
+}
+
+.phone-balance small {
+    opacity: .85;
+    font-size: 12px;
+}
+
+.phone-balance strong {
+    display: block;
+    font-family: "Sora", sans-serif;
+    font-size: 25px;
+    margin: 2px 0 14px;
+}
+
+.phone-mini-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 7px;
+    height: 40px;
+}
+
+.phone-mini-bars span {
+    flex: 1;
+    height: var(--h);
+    border-radius: 4px 4px 0 0;
+    background: rgba(255, 255, 255, .55);
+}
+
+.phone-mini-bars span:last-child {
+    background: var(--gold);
+}
+
+.phone-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 18px 0;
+}
+
+.phone-actions div {
+    padding: 12px 4px;
+    text-align: center;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, .06);
+    color: var(--text-light);
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.phone-actions i {
+    display: block;
+    color: var(--gold);
+    font-size: 19px;
+    margin-bottom: 4px;
+}
+
+.phone-tx {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-top: 1px solid rgba(255, 255, 255, .08);
+    color: var(--text-light);
+    font-size: 13px;
+}
+
+.phone-tx span:last-child {
+    font-weight: 700;
+}
+
+.phone-tx .in {
+    color: #6fe0a6;
+}
+
+.digital-content h2 {
+    font-size: clamp(30px, 3.6vw, 40px);
+    font-weight: 600;
+    margin: 6px 0 18px;
+}
+
+.digital-content > p {
+    color: #c4cfe6;
+}
+
+.digital-features {
+    margin: 30px 0 34px;
+}
+
+.digital-feature {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.digital-feature .icon-tile {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    font-size: 22px;
+}
+
+.digital-feature h5 {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+
+.digital-feature p {
+    color: var(--muted);
+    margin: 0;
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta {
+    position: relative;
+    padding: 90px 0;
+    text-align: center;
+    color: #fff;
+    background:
+        radial-gradient(500px 300px at 15% 0%, rgba(240, 182, 74, .3), transparent 70%),
+        linear-gradient(120deg, #1a5fb0 0%, var(--blue) 55%, #3aa6df 100%);
+}
+
+.cta h2 {
+    color: #fff;
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.cta p {
+    font-size: 18px;
+    color: #eaf3ff;
+    margin-bottom: 32px;
+}
+
+.cta-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.site-footer {
+    background: var(--navy-950);
+    color: var(--muted);
+    padding-top: 74px;
+}
+
+.site-footer h5 {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.site-footer p {
+    line-height: 1.8;
+}
+
+.footer-brand {
+    margin-bottom: 18px;
+}
+
+.site-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.site-footer li {
+    margin-bottom: 11px;
+}
+
+.site-footer li a,
+.footer-contact a {
+    color: var(--muted);
+    transition: color .2s;
+}
+
+.site-footer li a:hover,
+.footer-contact a:hover {
+    color: var(--gold);
+}
+
+.footer-contact div {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 14px;
+    align-items: flex-start;
+}
+
+.footer-contact i {
+    color: var(--gold);
+    margin-top: 3px;
+}
+
+.footer-contact a {
+    word-break: break-word;
+}
+
+.social-icons {
+    margin-top: 22px;
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, .07);
+    color: #fff;
+    transition: background .2s, color .2s;
+}
+
+.social-icons a:hover {
+    background: var(--gold);
+    color: var(--navy-900);
+}
+
+.footer-bottom {
+    margin-top: 54px;
+    padding: 22px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, .08);
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .site-header .navbar-collapse {
+        padding: 16px 0 8px;
+    }
+
+    .site-header .btn-gold {
+        margin-top: 12px;
+        display: inline-block;
+    }
+
+    .hero {
+        padding: 64px 0 150px;
+    }
+
+    .login-card {
+        margin-top: 44px;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .bento {
+        grid-template-columns: 1fr;
+    }
+
+    .bento-main,
+    .bento-wide,
+    .bento-half,
+    .bento-third {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .about-content {
+        padding-left: 0;
+        padding-top: 44px;
+    }
+
+    .calc {
+        margin-top: 28px;
+    }
+
+    .phone-wrap {
+        margin-bottom: 44px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .topbar {
+        text-align: center;
+    }
+
+    .topbar .topbar-links {
+        display: none;
+    }
+
+    .topbar .topbar-contact span {
+        display: block;
+        margin: 2px 0 !important;
+    }
+
+    .hero-bars {
+        height: 100px;
+        gap: 8px;
+    }
+
+    .login-card,
+    .calc {
+        padding: 26px;
+    }
+
+    .about-points {
+        grid-template-columns: 1fr;
+    }
+
+    .about-frame img {
+        height: 320px;
+    }
+
+    .calc-emi {
+        font-size: 32px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .hero-bars span {
+        animation: none;
+    }
+
+    * {
+        transition: none !important;
+    }
+}
+
+
+/* =====================================================
+   v2: PRODUCT CATALOG LAYOUT
+===================================================== */
+
+/* ---------- header additions ---------- */
+
+.site-header .container {
+    position: relative;
+}
+
+.nav-call {
+    color: #fff;
+}
+
+.mega-menu h6 {
+    color: var(--gold);
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 14px 8px;
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    margin-bottom: 6px;
+}
+
+@media (min-width: 992px) {
+
+    .site-header .mega {
+        position: static;
+    }
+
+    .site-header .mega-menu {
+        left: 0;
+        right: 0;
+        width: 100%;
+        margin-top: 14px;
+        padding: 26px 24px;
+    }
+
+    .site-header .mega-menu.show {
+        display: grid;
+        grid-template-columns: 1.2fr .8fr .8fr 1.3fr;
+        gap: 28px;
+    }
+}
+
+
+/* ---------- hero carousel ---------- */
+
+.hero h1 {
+    font-size: clamp(32px, 4.2vw, 52px);
+}
+
+.hero-carousel .carousel-item {
+    min-height: 400px;
+}
+
+.hero-dots {
+    position: static;
+    justify-content: flex-start;
+    margin: 30px 0 0;
+    gap: 8px;
+}
+
+.hero-dots [data-bs-target] {
+    width: 34px;
+    height: 4px;
+    margin: 0;
+    border: 0;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, .3);
+    opacity: 1;
+}
+
+.hero-dots .active {
+    background: var(--gold);
+}
+
+.login-card .form-select {
+    height: 50px;
+    background-color: rgba(6, 13, 34, .55);
+    border: 1px solid rgba(255, 255, 255, .16);
+    border-radius: var(--radius-md);
+    color: #fff;
+    font-size: 14px;
+}
+
+.login-card .form-select:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 4px rgba(240, 182, 74, .18);
+}
+
+.login-card .form-select option {
+    color: #0a1432;
+}
+
+.form-fine {
+    margin: 16px 0 0;
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+}
+
+.form-fine a {
+    color: var(--sky);
+}
+
+
+/* ---------- section tweaks ---------- */
+
+.section-dark .section-head p,
+.section-dark .digital-content > p {
+    color: #c4cfe6;
+}
+
+.section-dark .section-kicker {
+    color: var(--gold);
+}
+
+
+/* ---------- about (light) ---------- */
+
+.about-light h2 {
+    color: var(--ink);
+}
+
+.about-light p {
+    color: var(--text-dark);
+}
+
+.about-points-light {
+    grid-template-columns: 1fr;
+}
+
+.about-points-light div {
+    align-items: flex-start;
+    background: var(--paper);
+    border-color: var(--line);
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.about-points-light strong {
+    display: block;
+    color: var(--ink);
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.about-points-light i {
+    margin-top: 2px;
+}
+
+
+/* ---------- product tabs + cards ---------- */
+
+.product-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 34px;
+    list-style: none;
+}
+
+.product-tabs button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--ink);
+    font-weight: 700;
+    font-size: 14px;
+    transition: all .2s;
+}
+
+.product-tabs button:hover {
+    border-color: var(--blue);
+}
+
+.product-tabs button.active {
+    background: var(--navy-900);
+    border-color: var(--navy-900);
+    color: #fff;
+}
+
+.product-tabs button.active i {
+    color: var(--gold);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+    gap: 20px;
+}
+
+.p-card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    transition: border-color .25s, box-shadow .25s;
+}
+
+.p-card:hover {
+    border-color: rgba(47, 143, 224, .5);
+    box-shadow: 0 18px 40px rgba(16, 31, 74, .1);
+}
+
+.p-card h3 {
+    font-size: 19px;
+    margin: 18px 0 14px;
+}
+
+.p-card ul {
+    list-style: none;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.p-card li {
+    position: relative;
+    padding: 5px 0 5px 24px;
+    font-size: 15px;
+}
+
+.p-card li::before {
+    content: "\F26A";
+    font-family: "bootstrap-icons";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    color: var(--gold-deep);
+    font-size: 14px;
+}
+
+
+/* ---------- plan picker ---------- */
+
+.plan-list {
+    gap: 10px;
+}
+
+.plan-list button {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    padding: 17px 20px;
+    text-align: left;
+    color: var(--text-light);
+    font-weight: 700;
+    font-size: 15px;
+    background: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: var(--radius-md);
+    transition: all .2s;
+}
+
+.plan-list button i {
+    color: var(--sky);
+    font-size: 20px;
+}
+
+.plan-list button:hover {
+    border-color: rgba(240, 182, 74, .6);
+}
+
+.plan-list button.active {
+    background: var(--gold-gradient);
+    border-color: transparent;
+    color: var(--navy-900);
+}
+
+.plan-list button.active i {
+    color: var(--navy-900);
+}
+
+.plan-panel {
+    height: 100%;
+    padding: 44px;
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, .06);
+    border: 1px solid rgba(255, 255, 255, .12);
+}
+
+.plan-panel h3 {
+    font-size: 28px;
+    margin-bottom: 14px;
+}
+
+.plan-panel p {
+    color: #c4cfe6;
+    font-size: 17px;
+    max-width: 520px;
+}
+
+.plan-panel ul {
+    list-style: none;
+    margin: 22px 0 30px;
+}
+
+.plan-panel li {
+    padding: 7px 0;
+    color: var(--text-light);
+}
+
+.plan-panel li::before {
+    content: "\F26A";
+    font-family: "bootstrap-icons";
+    color: var(--gold);
+    margin-right: 12px;
+}
+
+
+/* ---------- why choose us ---------- */
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.feature {
+    padding: 30px;
+    border-radius: var(--radius-lg);
+    background: var(--paper);
+    border: 1px solid var(--line);
+}
+
+.feature h3 {
+    font-size: 18px;
+    margin: 18px 0 8px;
+}
+
+.feature p {
+    margin: 0;
+    font-size: 15px;
+}
+
+
+/* ---------- home financing ---------- */
+
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.home-grid > div {
+    padding: 28px;
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(255, 255, 255, .12);
+}
+
+.home-grid i {
+    font-size: 28px;
+    color: var(--gold);
+}
+
+.home-grid h5 {
+    font-size: 17px;
+    margin: 14px 0 6px;
+}
+
+.home-grid p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+
+/* ---------- offers ---------- */
+
+.offer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.offer {
+    padding: 30px;
+    border-radius: var(--radius-lg);
+    background: #fff;
+    border: 1px solid var(--line);
+    border-top: 4px solid var(--gold);
+}
+
+.offer i {
+    font-size: 28px;
+    color: var(--blue);
+}
+
+.offer h3 {
+    font-size: 18px;
+    margin: 14px 0 8px;
+}
+
+.offer p {
+    margin: 0;
+    font-size: 15px;
+}
+
+
+/* ---------- footer ---------- */
+
+.two-col {
+    columns: 2;
+    column-gap: 20px;
+}
+
+.two-col li {
+    break-inside: avoid;
+    font-size: 14px;
+}
+
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 991px) {
+
+    .feature-grid,
+    .offer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-carousel .carousel-item {
+        min-height: 0;
+    }
+
+    .site-header .mega-menu {
+        border: 0;
+        padding: 4px 0 8px;
+        box-shadow: none;
+    }
+
+    .plan-panel {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 575px) {
+
+    .feature-grid,
+    .offer-grid,
+    .home-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .two-col {
+        columns: 1;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<!-- ================= LOGO (defined once, reused) ================= -->
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+        <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ffd27a"/>
+            <stop offset=".5" stop-color="#f0b64a"/>
+            <stop offset="1" stop-color="#d99a2b"/>
+        </linearGradient>
+        <linearGradient id="gBlue" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#62c6f2"/>
+            <stop offset="1" stop-color="#2f8fe0"/>
+        </linearGradient>
+
+        <symbol id="dhansetu-mark" viewBox="0 0 120 120">
+            <path d="M25 95 A50 50 0 1 1 92 22" fill="none" stroke="url(#gGold)" stroke-width="6" stroke-linecap="round"/>
+            <path d="M108 48 A50 50 0 0 1 72 108" fill="none" stroke="url(#gBlue)" stroke-width="6" stroke-linecap="round"/>
+            <rect x="36" y="76" width="12" height="24" rx="1.5" fill="url(#gBlue)"/>
+            <rect x="54" y="64" width="12" height="36" rx="1.5" fill="url(#gBlue)"/>
+            <rect x="72" y="54" width="12" height="46" rx="1.5" fill="url(#gBlue)"/>
+            <polyline points="26,84 46,62 56,72 80,46" fill="none" stroke="url(#gGold)" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+            <polygon points="92,34 74,40 86,52" fill="url(#gGold)"/>
+            <circle cx="64" cy="36" r="4.5" fill="url(#gGold)"/>
+            <path d="M50 54 Q60 40 72 45 Q62 49 58 60 Z" fill="url(#gGold)"/>
+            <polygon points="100,8 102,13 108,13.5 103.3,17 104.7,22.5 100,19.5 95.3,22.5 96.7,17 92.4,13.5 98,13" fill="url(#gGold)"/>
+        </symbol>
+    </defs>
+</svg>
+
+
+<!-- ================= TOP BAR ================= -->
+
+<div class="topbar">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-7 topbar-contact">
+
+                <span>
+                    <i class="bi bi-telephone-fill"></i>
+                    <a href="tel:+919741162028">+91 97411 62028</a>
+                </span>
+
+                <span class="ms-4">
+                    <i class="bi bi-envelope-fill"></i>
+                    <a href="mailto:dhansetubusinesssolutions@gmail.com">dhansetubusinesssolutions@gmail.com</a>
+                </span>
+
+            </div>
+
+            <div class="col-md-5 text-md-end topbar-links">
+                <a href="#offers">Offers</a>
+                <a href="#emi">EMI calculator</a>
+                <a href="#contact">Help &amp; support</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= HEADER + NAVBAR ================= -->
+
+<header class="site-header">
+
+    <nav class="navbar navbar-expand-lg">
+
+        <div class="container">
+
+            <a href="/" class="brand" aria-label="DhanSetu Business Solutions home">
+
+                <svg class="brand-mark" aria-hidden="true">
+                    <use href="#dhansetu-mark"></use>
+                </svg>
+
+                <span>
+                    <span class="brand-name">DhanSetu</span>
+                    <span class="brand-tag">business solutions</span>
+                </span>
+
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainMenu"
+                aria-controls="mainMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainMenu">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item dropdown mega">
+
+                        <a class="nav-link dropdown-toggle" href="#products" data-bs-toggle="dropdown" aria-expanded="false">
+                            Products &amp; services
+                        </a>
+
+                        <div class="dropdown-menu mega-menu">
+
+                            <div>
+                                <h6>Loans</h6>
+                                <a class="dropdown-item" href="#products">Personal loan</a>
+                                <a class="dropdown-item" href="#products">Home loan</a>
+                                <a class="dropdown-item" href="#products">Car loan</a>
+                                <a class="dropdown-item" href="#products">Business loan</a>
+                                <a class="dropdown-item" href="#products">Used car loan</a>
+                                <a class="dropdown-item" href="#products">Equipment loan</a>
+                                <a class="dropdown-item" href="#products">Overdraft facility</a>
+                                <a class="dropdown-item" href="#products">Commercial vehicle loan</a>
+                            </div>
+
+                            <div>
+                                <h6>Cards</h6>
+                                <a class="dropdown-item" href="#products">Credit cards</a>
+                            </div>
+
+                            <div>
+                                <h6>Insurance</h6>
+                                <a class="dropdown-item" href="#products">Health insurance</a>
+                                <a class="dropdown-item" href="#products">Life insurance</a>
+                            </div>
+
+                            <div>
+                                <h6>Investments</h6>
+                                <a class="dropdown-item" href="#plans">ULIP (market linked)</a>
+                                <a class="dropdown-item" href="#plans">Money back plan</a>
+                                <a class="dropdown-item" href="#plans">Guaranteed income plan</a>
+                                <a class="dropdown-item" href="#plans">Child investment plan</a>
+                                <a class="dropdown-item" href="#plans">Pension / retirement plan</a>
+                            </div>
+
+                        </div>
+
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="#offers">Offers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#emi">EMI calculator</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Help &amp; support</a></li>
+
+                    <li class="nav-item ms-lg-3">
+                        <a href="tel:+919741162028" class="btn btn-ghost btn-sm nav-call">
+                            <i class="bi bi-telephone-fill me-1"></i>
+                            Free consultation
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-lg-2">
+                        <a href="#" class="btn btn-gold btn-sm">
+                            <i class="bi bi-box-arrow-in-right me-1"></i>
+                            Login
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-7">
+
+                <div id="heroSlides" class="carousel slide hero-carousel" data-bs-ride="carousel" data-bs-interval="5500">
+
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <span class="hero-pill"><i class="bi bi-lightning-charge-fill"></i>Fast &amp; flexible loans</span>
+                            <h1>Personal loans, <strong>made simple and quick</strong></h1>
+                            <p class="hero-lead">Minimal paperwork, clear terms and quick decisions, so you can get on with what matters.</p>
+                            <div class="hero-actions">
+                                <a href="#eligibility" class="btn btn-gold btn-lg">Apply now</a>
+                                <a href="#products" class="btn btn-ghost btn-lg">See all loans</a>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <span class="hero-pill"><i class="bi bi-house-heart-fill"></i>Own your home</span>
+                            <h1>Home loans for <strong>the place you'll call yours</strong></h1>
+                            <p class="hero-lead">Affordable EMIs and flexible tenure options to match your plans.</p>
+                            <div class="hero-actions">
+                                <a href="#eligibility" class="btn btn-gold btn-lg">Apply for a home loan</a>
+                                <a href="#emi" class="btn btn-ghost btn-lg">Check your EMI</a>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <span class="hero-pill"><i class="bi bi-car-front-fill"></i>Drive your dream</span>
+                            <h1>Car loans <strong>for new and used cars</strong></h1>
+                            <p class="hero-lead">Flexible EMIs and simple documentation from application to delivery.</p>
+                            <div class="hero-actions">
+                                <a href="#eligibility" class="btn btn-gold btn-lg">Check eligibility</a>
+                                <a href="#products" class="btn btn-ghost btn-lg">Loan details</a>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <span class="hero-pill"><i class="bi bi-truck"></i>Power your business</span>
+                            <h1>Commercial vehicle loans <strong>that move your growth</strong></h1>
+                            <p class="hero-lead">Finance trucks, buses and fleet vehicles with repayment that suits your cash flow.</p>
+                            <div class="hero-actions">
+                                <a href="#eligibility" class="btn btn-gold btn-lg">Get funded</a>
+                                <a href="#products" class="btn btn-ghost btn-lg">Business loans</a>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <span class="hero-pill"><i class="bi bi-credit-card-2-front-fill"></i>Smart spending</span>
+                            <h1>Credit cards <strong>with rewards that fit your life</strong></h1>
+                            <p class="hero-lead">Cashback, rewards and secure payments, with EMI conversion when you need it.</p>
+                            <div class="hero-actions">
+                                <a href="#eligibility" class="btn btn-gold btn-lg">Apply for a card</a>
+                                <a href="#products" class="btn btn-ghost btn-lg">Compare cards</a>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <span class="hero-pill"><i class="bi bi-heart-pulse-fill"></i>Health first</span>
+                            <h1>Health insurance <strong>for you and your family</strong></h1>
+                            <p class="hero-lead">Cashless hospital networks and family floater options in one plan.</p>
+                            <div class="hero-actions">
+                                <a href="#eligibility" class="btn btn-gold btn-lg">Get a quote</a>
+                                <a href="#products" class="btn btn-ghost btn-lg">View plans</a>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <span class="hero-pill"><i class="bi bi-graph-up-arrow"></i>Grow your wealth</span>
+                            <h1>Smart investments <strong>for a secure tomorrow</strong></h1>
+                            <p class="hero-lead">Market-linked, guaranteed-income and retirement plans, matched to your goals.</p>
+                            <div class="hero-actions">
+                                <a href="#plans" class="btn btn-gold btn-lg">Explore plans</a>
+                                <a href="#contact" class="btn btn-ghost btn-lg">Talk to an advisor</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="carousel-indicators hero-dots">
+                        <button type="button" data-bs-target="#heroSlides" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Personal loan"></button>
+                        <button type="button" data-bs-target="#heroSlides" data-bs-slide-to="1" aria-label="Home loan"></button>
+                        <button type="button" data-bs-target="#heroSlides" data-bs-slide-to="2" aria-label="Car loan"></button>
+                        <button type="button" data-bs-target="#heroSlides" data-bs-slide-to="3" aria-label="Commercial vehicle loan"></button>
+                        <button type="button" data-bs-target="#heroSlides" data-bs-slide-to="4" aria-label="Credit cards"></button>
+                        <button type="button" data-bs-target="#heroSlides" data-bs-slide-to="5" aria-label="Health insurance"></button>
+                        <button type="button" data-bs-target="#heroSlides" data-bs-slide-to="6" aria-label="Investments"></button>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ELIGIBILITY FORM -->
+
+            <div class="col-lg-5" id="eligibility">
+
+                <div class="login-card">
+
+                    <div class="login-head">
+
+                        <div class="login-icon">
+                            <i class="bi bi-patch-check-fill"></i>
+                        </div>
+
+                        <div>
+                            <h2>Check your eligibility</h2>
+                            <p>Tell us a little and we'll call you back</p>
+                        </div>
+
+                    </div>
+
+                    <form method="post" action="#">
+
+                        {% csrf_token %}
+
+                        <div class="mb-3">
+                            <label for="fullName">Full name</label>
+                            <input type="text" id="fullName" name="full_name" class="form-control" placeholder="Enter your full name" autocomplete="name" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="mobile">Mobile number</label>
+                            <input type="tel" id="mobile" name="mobile" class="form-control" placeholder="10-digit mobile number" autocomplete="tel" inputmode="numeric" pattern="[0-9]{10}" required>
+                        </div>
+
+                        <div class="row g-3 mb-3">
+
+                            <div class="col-sm-6">
+                                <label for="loanAmount">Loan amount</label>
+                                <select id="loanAmount" name="loan_amount" class="form-select" required>
+                                    <option value="" selected disabled>Select amount</option>
+                                    <option>1,00,000</option>
+                                    <option>3,00,000</option>
+                                    <option>5,00,000</option>
+                                    <option>10,00,000</option>
+                                    <option>15,00,000+</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label for="employment">Employment type</label>
+                                <select id="employment" name="employment_type" class="form-select" required>
+                                    <option value="" selected disabled>Select type</option>
+                                    <option>Salaried</option>
+                                    <option>Self employed</option>
+                                    <option>Business owner</option>
+                                    <option>Freelancer</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="btn btn-gold login-submit">
+                            Check eligibility
+                        </button>
+
+                        <p class="form-fine">
+                            By submitting, you agree to our
+                            <a href="#">Terms &amp; Conditions</a> and
+                            <a href="#">Privacy Policy</a>.
+                        </p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="hero-bars" aria-hidden="true">
+        <span style="--h:30%;--i:0"></span>
+        <span style="--h:44%;--i:1"></span>
+        <span style="--h:38%;--i:2"></span>
+        <span style="--h:58%;--i:3"></span>
+        <span style="--h:52%;--i:4"></span>
+        <span style="--h:72%;--i:5"></span>
+        <span style="--h:66%;--i:6"></span>
+        <span style="--h:88%;--i:7"></span>
+        <span style="--h:100%;--i:8"></span>
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="section" id="about">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <div class="about-content about-light">
+
+                    <span class="section-kicker">About us</span>
+
+                    <h2>Smart financial solutions for every life goal</h2>
+
+                    <p>
+                        DhanSetu Business Solutions helps individuals and businesses find the
+                        right loan, card, insurance cover or investment plan. "Setu" means
+                        bridge, and that is our job: connecting your goals to the financing
+                        that gets you there.
+                    </p>
+
+                    <div class="about-points about-points-light">
+
+                        <div>
+                            <i class="bi bi-person-heart"></i>
+                            <span>
+                                <strong>Customer-first approach</strong>
+                                We explain your options plainly and help you choose with full clarity.
+                            </span>
+                        </div>
+
+                        <div>
+                            <i class="bi bi-award"></i>
+                            <span>
+                                <strong>Guidance from start to finish</strong>
+                                Support from eligibility check to approval and disbursal.
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <a href="#eligibility" class="btn btn-gold">Apply now</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="about-frame">
+                    <img
+                        src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=80"
+                        alt="DhanSetu advisor meeting with a client">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="section section-light" id="products">
+
+    <div class="container">
+
+        <div class="section-head">
+            <span class="section-kicker">Products &amp; services</span>
+            <h2>Smart money choices, all in one place</h2>
+            <p>Loans, cards, insurance and investments, arranged through our banking partners.</p>
+        </div>
+
+        <ul class="nav product-tabs" role="tablist">
+            <li role="presentation"><button class="active" data-bs-toggle="pill" data-bs-target="#tab-loans" type="button" role="tab"><i class="bi bi-cash-coin"></i>Loans</button></li>
+            <li role="presentation"><button data-bs-toggle="pill" data-bs-target="#tab-cards" type="button" role="tab"><i class="bi bi-credit-card-2-front"></i>Cards</button></li>
+            <li role="presentation"><button data-bs-toggle="pill" data-bs-target="#tab-insurance" type="button" role="tab"><i class="bi bi-shield-check"></i>Insurance</button></li>
+            <li role="presentation"><button data-bs-toggle="pill" data-bs-target="#tab-invest" type="button" role="tab"><i class="bi bi-graph-up-arrow"></i>Investments</button></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <!-- LOANS -->
+            <div class="tab-pane fade show active" id="tab-loans" role="tabpanel">
+                <div class="product-grid">
+
+                    <article class="p-card">
+                        <div class="icon-tile"><i class="bi bi-person-check"></i></div>
+                        <h3>Personal loan</h3>
+                        <ul>
+                            <li>Quick approvals</li>
+                            <li>Flexible tenure</li>
+                            <li>Minimal documentation</li>
+                        </ul>
+                        <a href="#eligibility" class="text-link">Apply now</a>
+                    </article>
+
+                    <article class="p-card">
+                        <div class="icon-tile gold"><i class="bi bi-briefcase"></i></div>
+                        <h3>Business loan</h3>
+                        <ul>
+                            <li>Working capital support</li>
+                            <li>Fast disbursal</li>
+                            <li>Competitive rates</li>
+                        </ul>
+                        <a href="#eligibility" class="text-link">Apply now</a>
+                    </article>
+
+                    <article class="p-card">
+                        <div class="icon-tile"><i class="bi bi-house-door"></i></div>
+                        <h3>Home loan</h3>
+                        <ul>
+                            <li>Affordable EMIs</li>
+                            <li>Long tenure options</li>
+                            <li>Top-up available</li>
+                        </ul>
+                        <a href="#eligibility" class="text-link">Apply now</a>
+                    </article>
+
+                    <article class="p-card">
+                        <div class="icon-tile gold"><i class="bi bi-car-front"></i></div>
+                        <h3>Car loan</h3>
+                        <ul>
+                            <li>New and used car financing</li>
+                            <li>Quick processing</li>
+                            <li>Easy repayment</li>
+                        </ul>
+                        <a href="#eligibility" class="text-link">Apply now</a>
+                    </article>
+
+                    <article class="p-card">
+                        <div class="icon-tile"><i class="bi bi-car-front-fill"></i></div>
+                        <h3>Used car loan</h3>
+                        <ul>
+                            <li>Pre-owned vehicles</li>
+                            <li>Simple eligibility</li>
+                            <li>Flexible terms</li>
+                        </ul>
+                        <a href="#eligibility" class="text-link">Apply now</a>
+                    </article>
+
+                    <article class="p-card">
+                        <div class="icon-tile gold"><i class="bi bi-truck"></i></div>
+                        <h3>Commercial vehicle loan</h3>
+                        <ul>
+                            <li>For fleets and transport</li>
+                            <li>Structured repayment</li>
+                            <li>Quick disbursal</li>
+                        </ul>
+                        <a href="#eligibility" class="text-link">Apply now</a>
+                    </article>
+
+                    <article class="p-card">
+                        <div class="icon-tile"><i class="bi bi-tools"></i></div>
+                        <h3>Equipment loan</h3>
+                        <ul>
+                            <li>Upgrade machinery</li>
+                            <li>Support business expansion</li>
+                            <li>Flexible tenure</li>
+                        </ul>
+                        <a href="#eligibility" class="text-link">Apply now</a>
+                    </article>
+
+                    <article class="p-card">
+                        <div class="icon-tile gold"><i class="bi bi-arrow-repeat"></i></div>
+                        <h3>Overdraft facility</h3>
+                        <ul>
+                            <li>Cash-flow support</li>
+                            <li>Pay interest only on what you use</li>
+                            <li>Fast setup</li>
+                        </ul>
+                        <a href="#eligibility" class="text-link">Apply now</a>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- CARDS -->
+            <div class="tab-pane fade" id="tab-cards" role="tabpanel">
+                <div class="product-grid">
+
+                    <article class="p-card">
+                        <div class="icon-tile"><i class="bi bi-credit-card-2-front"></i></div>
+                        <h3>Credit cards</h3>
+                        <ul>
+                            <li>Rewards and cashback</li>
+                            <li>EMI conversion</li>
+                            <li>Secure payments</li>
+                        </ul>
+                        <a href="#eligibility" class="text-link">Apply for a card</a>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- INSURANCE -->
+            <div class="tab-pane fade" id="tab-insurance" role="tabpanel">
+                <div class="product-grid">
+
+                    <article class="p-card">
+                        <div class="icon-tile"><i class="bi bi-heart-pulse"></i></div>
+                        <h3>Health insurance</h3>
+                        <ul>
+                            <li>Cashless hospital network</li>
+                            <li>Family floater options</li>
+                            <li>Easy renewal</li>
+                        </ul>
+                        <a href="#eligibility" class="text-link">Get a quote</a>
+                    </article>
+
+                    <article class="p-card">
+                        <div class="icon-tile gold"><i class="bi bi-shield-heart"></i></div>
+                        <h3>Life insurance</h3>
+                        <ul>
+                            <li>Term and savings plans</li>
+                            <li>Flexible premiums</li>
+                            <li>Long-term protection</li>
+                        </ul>
+                        <a href="#eligibility" class="text-link">Get a quote</a>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- INVESTMENTS -->
+            <div class="tab-pane fade" id="tab-invest" role="tabpanel">
+                <div class="product-grid">
+
+                    <article class="p-card">
+                        <div class="icon-tile"><i class="bi bi-graph-up-arrow"></i></div>
+                        <h3>Investments</h3>
+                        <ul>
+                            <li>Mutual funds and SIP</li>
+                            <li>Bonds</li>
+                            <li>PPF</li>
+                        </ul>
+                        <a href="#plans" class="text-link">See investment plans</a>
+                    </article>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INVESTMENT PLANS ================= -->
+
+<section class="section section-dark" id="plans">
+
+    <div class="container">
+
+        <div class="section-head">
+            <span class="section-kicker">Investment &amp; insurance</span>
+            <h2>Choose a plan that matches your goal</h2>
+            <p>Compare market-linked growth, guaranteed income and long-term family plans in one place.</p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+
+            <div class="col-lg-4">
+
+                <div class="plan-list nav flex-column" role="tablist">
+                    <button class="active" data-bs-toggle="pill" data-bs-target="#plan-ulip" type="button" role="tab"><i class="bi bi-bar-chart-line"></i>ULIP (market linked)</button>
+                    <button data-bs-toggle="pill" data-bs-target="#plan-money" type="button" role="tab"><i class="bi bi-arrow-counterclockwise"></i>Money back plan</button>
+                    <button data-bs-toggle="pill" data-bs-target="#plan-income" type="button" role="tab"><i class="bi bi-cash-stack"></i>Guaranteed income</button>
+                    <button data-bs-toggle="pill" data-bs-target="#plan-child" type="button" role="tab"><i class="bi bi-mortarboard"></i>Child investment</button>
+                    <button data-bs-toggle="pill" data-bs-target="#plan-pension" type="button" role="tab"><i class="bi bi-umbrella"></i>Pension / retirement</button>
+                </div>
+
+            </div>
+
+            <div class="col-lg-8">
+
+                <div class="tab-content plan-panel">
+
+                    <div class="tab-pane fade show active" id="plan-ulip" role="tabpanel">
+                        <h3>ULIP (market linked plan)</h3>
+                        <p>Life insurance and market-linked investing in one plan, built for long-term wealth creation.</p>
+                        <ul>
+                            <li>Market-linked returns</li>
+                            <li>Life cover included</li>
+                            <li>Possible tax benefits</li>
+                        </ul>
+                        <a href="#eligibility" class="btn btn-gold">Apply now</a>
+                    </div>
+
+                    <div class="tab-pane fade" id="plan-money" role="tabpanel">
+                        <h3>Money back plan</h3>
+                        <p>Receive payouts at regular intervals while your family stays protected.</p>
+                        <ul>
+                            <li>Periodic survival benefits</li>
+                            <li>Maturity benefit</li>
+                            <li>Life cover</li>
+                        </ul>
+                        <a href="#eligibility" class="btn btn-gold">Apply now</a>
+                    </div>
+
+                    <div class="tab-pane fade" id="plan-income" role="tabpanel">
+                        <h3>Guaranteed income plan</h3>
+                        <p>A steady, predictable income with no market-risk exposure.</p>
+                        <ul>
+                            <li>Fixed returns</li>
+                            <li>Low risk</li>
+                            <li>Long-term income</li>
+                        </ul>
+                        <a href="#eligibility" class="btn btn-gold">Apply now</a>
+                    </div>
+
+                    <div class="tab-pane fade" id="plan-child" role="tabpanel">
+                        <h3>Child investment plan</h3>
+                        <p>Plan for your child's education and big milestones with protection built in.</p>
+                        <ul>
+                            <li>Future education fund</li>
+                            <li>Premium waiver benefit</li>
+                            <li>Long-term growth</li>
+                        </ul>
+                        <a href="#eligibility" class="btn btn-gold">Apply now</a>
+                    </div>
+
+                    <div class="tab-pane fade" id="plan-pension" role="tabpanel">
+                        <h3>Pension / retirement plan</h3>
+                        <p>Build a retirement corpus so you can live independently after work.</p>
+                        <ul>
+                            <li>Retirement income</li>
+                            <li>Annuity options</li>
+                            <li>A secure future</li>
+                        </ul>
+                        <a href="#eligibility" class="btn btn-gold">Apply now</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EMI CALCULATOR ================= -->
+
+<section class="section section-light" id="emi">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-5">
+
+                <div class="section-head mb-0">
+                    <span class="section-kicker">EMI calculator</span>
+                    <h2>Know your monthly payment before you apply</h2>
+                    <p>Move the sliders to see what your EMI could be, and how much of it is principal and interest.</p>
+                    <a href="#eligibility" class="btn btn-gold mt-3">Check eligibility</a>
+                </div>
+
+            </div>
+
+            <div class="col-lg-7">
+
+                <div class="calc" id="emiCalc">
+
+                    <h3>EMI calculator</h3>
+                    <p class="calc-sub">Estimate your monthly payment.</p>
+
+                    <div class="calc-row">
+                        <div class="calc-row-top">
+                            <label for="amount">Loan amount</label>
+                            <output id="amountOut"></output>
+                        </div>
+                        <input type="range" id="amount" min="10000" max="10000000" step="10000" value="1000000">
+                    </div>
+
+                    <div class="calc-row">
+                        <div class="calc-row-top">
+                            <label for="months">Loan tenure</label>
+                            <output id="monthsOut"></output>
+                        </div>
+                        <input type="range" id="months" min="6" max="240" step="6" value="120">
+                    </div>
+
+                    <div class="calc-row">
+                        <div class="calc-row-top">
+                            <label for="rate">Interest rate (per year)</label>
+                            <output id="rateOut"></output>
+                        </div>
+                        <input type="range" id="rate" min="7" max="21" step="0.1" value="10">
+                    </div>
+
+                    <div class="calc-result">
+
+                        <div class="calc-emi-label">Your monthly EMI</div>
+                        <div class="calc-emi" id="emiOut"></div>
+
+                        <div class="calc-split" aria-hidden="true">
+                            <div class="principal" id="principalBar"></div>
+                            <div class="interest"></div>
+                        </div>
+
+                        <div class="calc-legend">
+                            <div>Principal<strong id="principalOut"></strong></div>
+                            <div>Interest<strong id="interestOut"></strong></div>
+                            <div>Payable amount<strong id="totalOut"></strong></div>
+                        </div>
+
+                    </div>
+
+                    <p class="calc-note">Estimate only. The final rate depends on your profile and loan type.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-head">
+            <span class="section-kicker">Why choose us</span>
+            <h2>Financial solutions you can rely on</h2>
+            <p>Reliable, transparent and customer-focused, so you can make confident decisions.</p>
+        </div>
+
+        <div class="feature-grid">
+
+            <div class="feature">
+                <div class="icon-tile"><i class="bi bi-person-heart"></i></div>
+                <h3>Customer-first approach</h3>
+                <p>We learn your goals and guide you to the right solution, with full clarity on terms.</p>
+            </div>
+
+            <div class="feature">
+                <div class="icon-tile gold"><i class="bi bi-grid-1x2"></i></div>
+                <h3>Wide range of solutions</h3>
+                <p>Loans, credit cards, insurance and investments, all under one roof.</p>
+            </div>
+
+            <div class="feature">
+                <div class="icon-tile"><i class="bi bi-signpost-split"></i></div>
+                <h3>Support at every step</h3>
+                <p>From eligibility check to approval and disbursal, we stay with you.</p>
+            </div>
+
+            <div class="feature">
+                <div class="icon-tile gold"><i class="bi bi-chat-square-heart"></i></div>
+                <h3>Transparent and flexible</h3>
+                <p>Honest advice and flexible options, with no surprises in the paperwork.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HOME FINANCING ================= -->
+
+<section class="section section-dark">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-5">
+
+                <div class="digital-content">
+
+                    <span class="section-kicker">Home financing</span>
+
+                    <h2>Elevate your living standard</h2>
+
+                    <p>
+                        A smooth path to your dream home, with financing designed
+                        around your budget and timeline.
+                    </p>
+
+                    <a href="#eligibility" class="btn btn-gold mt-3">Apply for a home loan</a>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-7">
+
+                <div class="home-grid">
+
+                    <div>
+                        <i class="bi bi-bank"></i>
+                        <h5>High loan eligibility</h5>
+                        <p>Financing sized to your needs, with repayment schedules that fit your lifestyle.</p>
+                    </div>
+
+                    <div>
+                        <i class="bi bi-percent"></i>
+                        <h5>Competitive rates</h5>
+                        <p>Attractive interest rates through our lending partners.</p>
+                    </div>
+
+                    <div>
+                        <i class="bi bi-file-earmark-check"></i>
+                        <h5>Simple processing</h5>
+                        <p>Minimal documentation, so your time is respected.</p>
+                    </div>
+
+                    <div>
+                        <i class="bi bi-speedometer2"></i>
+                        <h5>Quick decisions</h5>
+                        <p>Priority processing to move your application along faster.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= OFFERS ================= -->
+
+<!-- Confirm every offer below with your lending partners before publishing. -->
+
+<section class="section section-light" id="offers">
+
+    <div class="container">
+
+        <div class="section-head">
+            <span class="section-kicker">Exclusive loan offers</span>
+            <h2>Get more value for every rupee you borrow</h2>
+            <p>Apply in minutes and follow your application online from start to finish.</p>
+        </div>
+
+        <div class="offer-grid">
+
+            <div class="offer">
+                <i class="bi bi-tag"></i>
+                <h3>Low processing fees</h3>
+                <p>Save on charges with special fee offers on selected loan plans.</p>
+            </div>
+
+            <div class="offer">
+                <i class="bi bi-lightning-charge"></i>
+                <h3>Quick loan approval</h3>
+                <p>Skip the long wait with fast decisions and minimal documents.</p>
+            </div>
+
+            <div class="offer">
+                <i class="bi bi-percent"></i>
+                <h3>Attractive interest rates</h3>
+                <p>Keep your EMIs affordable and manageable.</p>
+            </div>
+
+            <div class="offer">
+                <i class="bi bi-calendar2-check"></i>
+                <h3>Flexible EMI options</h3>
+                <p>Choose a repayment plan that suits your monthly budget.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <h2>Your loan, approved faster</h2>
+
+        <p>Apply online, or call us and we'll walk you through it.</p>
+
+        <div class="cta-actions">
+            <a href="#eligibility" class="btn btn-gold btn-lg">Apply now</a>
+            <a href="tel:+919741162028" class="btn btn-ghost btn-lg">
+                <i class="bi bi-telephone-fill me-2"></i>+91 97411 62028
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="site-footer" id="contact">
+
+    <div class="container">
+
+        <div class="row g-5">
+
+            <div class="col-lg-4">
+
+                <a href="/" class="brand footer-brand" aria-label="DhanSetu Business Solutions home">
+
+                    <svg class="brand-mark" aria-hidden="true">
+                        <use href="#dhansetu-mark"></use>
+                    </svg>
+
+                    <span>
+                        <span class="brand-name">DhanSetu</span>
+                        <span class="brand-tag">business solutions</span>
+                    </span>
+
+                </a>
+
+                <p>
+                    Reliable financial solutions across loans, credit cards,
+                    insurance and investments.
+                </p>
+
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://wa.me/919741162028" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-2 col-md-6">
+
+                <h5>Quick links</h5>
+
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#products">Services</a></li>
+                    <li><a href="#offers">Offers</a></li>
+                    <li><a href="#emi">EMI calculator</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <h5>Services</h5>
+
+                <ul class="two-col">
+                    <li><a href="#products">Personal loan</a></li>
+                    <li><a href="#products">Home loan</a></li>
+                    <li><a href="#products">Car loan</a></li>
+                    <li><a href="#products">Business loan</a></li>
+                    <li><a href="#products">Overdraft facility</a></li>
+                    <li><a href="#products">Commercial vehicle loan</a></li>
+                    <li><a href="#products">Equipment loan</a></li>
+                    <li><a href="#products">Used car loan</a></li>
+                    <li><a href="#products">Credit cards</a></li>
+                    <li><a href="#products">Health insurance</a></li>
+                    <li><a href="#products">Life insurance</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="col-lg-3">
+
+                <h5>Contact us</h5>
+
+                <div class="footer-contact">
+
+                    <div>
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>DhanSetu Business Solutions, Head Office</span>
+                    </div>
+
+                    <div>
+                        <i class="bi bi-telephone-fill"></i>
+                        <a href="tel:+919741162028">+91 97411 62028</a>
+                    </div>
+
+                    <div>
+                        <i class="bi bi-envelope-fill"></i>
+                        <a href="mailto:dhansetubusinesssolutions@gmail.com">dhansetubusinesssolutions@gmail.com</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 DhanSetu Business Solutions. All rights reserved.</p>
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- EMI calculator -->
+<script>
+(function () {
+
+    var amount = document.getElementById("amount");
+    var months = document.getElementById("months");
+    var rate   = document.getElementById("rate");
+
+    function inr(n) {
+        return "₹" + Math.round(n).toLocaleString("en-IN");
+    }
+
+    function tenure(m) {
+        var y = Math.floor(m / 12), r = m % 12, parts = [];
+        if (y) parts.push(y + (y === 1 ? " year" : " years"));
+        if (r) parts.push(r + " months");
+        return parts.join(" ");
+    }
+
+    function update() {
+
+        var P = parseFloat(amount.value);
+        var n = parseInt(months.value, 10);
+        var r = parseFloat(rate.value) / 12 / 100;
+
+        var emi   = P * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1);
+        var total = emi * n;
+
+        document.getElementById("amountOut").textContent = inr(P);
+        document.getElementById("monthsOut").textContent = tenure(n);
+        document.getElementById("rateOut").textContent   = parseFloat(rate.value).toFixed(1) + "%";
+
+        document.getElementById("emiOut").textContent       = inr(emi);
+        document.getElementById("principalOut").textContent = inr(P);
+        document.getElementById("interestOut").textContent  = inr(total - P);
+        document.getElementById("totalOut").textContent     = inr(total);
+
+        document.getElementById("principalBar").style.width = (P / total * 100) + "%";
+    }
+
+    [amount, months, rate].forEach(function (el) {
+        el.addEventListener("input", update);
+    });
+
+    update();
+
+})();
+</script>
+
+</body>
+
+</html>
